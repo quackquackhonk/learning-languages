@@ -1,0 +1,25 @@
+#!/bin/bash
+
+import sys
+
+def fizzbuzz(top: int):
+    criteria = {
+        3: "fizz",
+        5: "buzz"
+    }
+
+    for ii in range(1, top + 1):
+        acc = ""
+
+        for kk in criteria:
+            if ii % kk == 0:
+                acc += criteria[kk]
+        
+        acc = acc if acc else str(ii)
+        print(acc)
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: ./fizzbuzz <num>")
+    else:
+        fizzbuzz(int(sys.argv[1]))

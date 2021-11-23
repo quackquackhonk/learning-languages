@@ -1,0 +1,7 @@
+#!/usr/bin/bash
+
+javac fizzbuzz.java
+
+java FizzBuzz ${1}
+
+rm -f FizzBuzz.class
